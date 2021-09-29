@@ -4,7 +4,7 @@ unset($CFG);
 global $CFG;
 $CFG = new stdClass();
 
-$CFG->dbtype    = getenv('postgres');
+$CFG->dbtype    = getenv('pgsql');
 $CFG->dblibrary = 'native';
 $CFG->dbhost    = getenv('ec2-34-197-135-44.compute-1.amazonaws.com');
 $CFG->dbname    = getenv('d2b6offpc1c8ns');
@@ -13,12 +13,12 @@ $CFG->dbpass    = getenv('cc2d29ececcf5d6c46d3378fa365381fbefc1f170b39c9e1783a9e
 $CFG->prefix    = 'mdl_';
 $CFG->dboptions = array (
   'dbpersist' => 0,
-  'dbport' => getenv('DATABASE_PORT'),
+  'dbport' => getenv('5001'),
   'dbsocket' => '',
 );
 
-$CFG->wwwroot   = getenv('WWWROOT');
-$CFG->dataroot  = getenv('DATAROOT');
+$CFG->wwwroot   = getenv('http://moodle-sst.herokuapp.com/');
+$CFG->dataroot  = getenv('try/temp');
 $CFG->admin     = 'admin';
 
 $CFG->directorypermissions = 0777;
